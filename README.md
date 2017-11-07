@@ -11,7 +11,7 @@ For a demonstration of this implementation, please see the youtube video we subm
 ## Team members:
 1. Ashish Neupane
 2. Bhushan Suwal
-3. Vincent Bett
+3. Vincent Bett      
 
 ## Video submission:
 *[Youtube Link](https://youtu.be/cThJ6RuENPg)*
