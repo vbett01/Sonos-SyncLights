@@ -1,12 +1,12 @@
 # SyncLights - Sonos Speaker Challenge Fall 2017
 ## Project Description:
-	This program syncs the frequencies of a real-time playing audio file to a lighting system through an Arduino. This project was built for the Sonos Speaker Challenge at Tufts University during Fall 2017. 
+This program syncs the frequencies of a real-time playing audio file to a lighting system through an Arduino. This project was built for the Sonos Speaker Challenge at Tufts University during Fall 2017. 
 
-	The original implementation had a simple web interface coupled with the Matlab files in this repository, but we chose to put up only the implementation here. This code is intended as an example of a simulation of a digital signal processor that can be used in a speaker. 
+The original implementation had a simple web interface coupled with the Matlab files in this repository, but we chose to put up only the implementation here. This code is intended as an example of a simulation of a digital signal processor that can be used in a speaker. 
 
-	The program makes a list of all the audio files in a directory, and plays them one by one. It applies a rectangular window (this is not the best window, but it provided a good enough dynamic range for the simulation) to produce an FFT-based spectogram. It then uses the power distribution in the spectrum of each block of time to light up bulbs with appropriate intensities.
+The program makes a list of all the audio files in a directory, and plays them one by one. It applies a rectangular window (this is not the best window, but it provided a good enough dynamic range for the simulation) to produce an FFT-based spectogram. It then uses the power distribution in the spectrum of each block of time to light up bulbs with appropriate intensities.
 
-	For a demonstration of this implementation, please see the youtube video we submitted linked below.
+For a demonstration of this implementation, please see the youtube video we submitted linked below.
 
 ## Team members:
 1. Ashish Neupane
