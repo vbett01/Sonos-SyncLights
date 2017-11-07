@@ -6,8 +6,6 @@ function obj = openSerialPort(comPort)
 
 obj = serial(comPort);
 set(obj,'DataBits',8);
-%set(obj,'StopBits',1);
-%set(obj,'BaudRate',230400);
 set(obj,'Parity','none');
 fopen(obj);
 

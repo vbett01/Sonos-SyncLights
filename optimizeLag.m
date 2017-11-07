@@ -1,3 +1,6 @@
+% Script used to optimize the window length
+
+
 deltaN = 1000 * (5:1:25);
 filename = 'short.mp3';
 

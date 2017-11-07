@@ -32,18 +32,21 @@ maxEnergy = 0;
 
 for k = 1 : numIntervals
     tic
+    % index of samples in this window
     n = (k - 1) * deltaN + 1 : k * deltaN;
     ys = y(n);
     if plot
         figure(1)
         set(gcf, 'Name', sprintf('%s',filename));
     end
+    % get the FFT in Xs_f and frequencies in f 
     [Xs_f, f] = getFreq(ys, n, Fs, plot);
     if k == 1
         soundsc(y, Fs);
     end
+    % send spectrum data for processing
     maxEnergy = sendData(obj, f, Xs_f, maxEnergy);
-   % fprintf('For k = %g,
+    % time the delay
     if deltaN/Fs > toc
         pause(deltaN / Fs - toc)
     end

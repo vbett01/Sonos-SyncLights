@@ -10,17 +10,19 @@ f_cutoff = [0, ...
             3000, ...   % Green light upto
             6000];      % Blue light upto
 
+% get energies in three bands
 energy = zeros(1,3);
 for k = 1 : 3
     energy(k) = (sum ( X_f(f > f_cutoff(k) & f < f_cutoff(k + 1)) ))^2;
 end
-
 maxEnergy = max([maxEnergy, energy]);
-[~, order] = sort(energy);
+
+% ranking algorithm commented out 
+% [~, order] = sort(energy);
 
 for k = 1 : 3
-    % k = frequency band decided by f_cutoff
-    energy(k) = (1 / find(order == k))^2 * energy(k);
+    % k : frequency band decided by f_cutoff
+    % energy(k) = (1 / find(order == k))^2 * energy(k);
     scale = 255 - round(energy(k)/maxEnergy * 255);
     fwrite(obj, scale);
 end
